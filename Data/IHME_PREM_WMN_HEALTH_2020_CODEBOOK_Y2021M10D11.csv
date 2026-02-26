@@ -1,0 +1,222 @@
+variable_name,question,question_type,value,answer_label
+user_id,User ID,IHME generated,NA,NA
+country,Country name,Text,N/A,N/A
+observation_id,Observation ID,IHME generated,N/A,N/A
+submitted_time,Date and time survey was submitted,Built-in data,N/A,N/A
+gender,What is your gender?,Select one,2,Female
+gender,What is your gender?,Select one,1,Male
+gender,What is your gender?,Select one,88,Prefer not to respond
+gender,What is your gender?,Select one,99,Not available
+age,What is your age?,Select one,1,Under 16
+age,What is your age?,Select one,2,16 to 25 years old
+age,What is your age?,Select one,3,26 to 35 years old
+age,What is your age?,Select one,4,36 to 45 years old
+age,What is your age?,Select one,5,Over 45 years old
+age,What is your age?,Select one,99,Not available
+geography,Where do you live?,Select one,1,City center or metropolitan area
+geography,Where do you live?,Select one,2,Suburban/Peri-urban
+geography,Where do you live?,Select one,3,Rural
+geography,Where do you live?,Select one,99,Not available
+financial_situation,What is your current financial situation?,Select one,1,"I can afford food and regular expenses, and buy new clothes once a year, but nothing else"
+financial_situation,What is your current financial situation?,Select one,2,"I can afford food and regular expenses, but nothing else"
+financial_situation,What is your current financial situation?,Select one,3,"I can afford food, but nothing else"
+financial_situation,What is your current financial situation?,Select one,4,"I can comfortably afford food, clothes, and furniture, and I have savings"
+financial_situation,What is your current financial situation?,Select one,5,I cannot afford enough food for my family
+financial_situation,What is your current financial situation?,Select one,99,Not Available
+education,What is the highest level of schooling you have completed?,Select one,1,No formal education
+education,What is the highest level of schooling you have completed?,Select one,2,Primary school
+education,What is the highest level of schooling you have completed?,Select one,3,Secondary/high school
+education,What is the highest level of schooling you have completed?,Select one,4,Technical school
+education,What is the highest level of schooling you have completed?,Select one,5,College or university
+education,What is the highest level of schooling you have completed?,Select one,6,Post graduate
+education,What is the highest level of schooling you have completed?,Select one,88,Prefer not to answer
+education,What is the highest level of schooling you have completed?,Select one,99,Not Available
+employment_status,What is your current employment status?,Select one,1,Employed full-time
+employment_status,What is your current employment status?,Select one,2,Employed part-time
+employment_status,What is your current employment status?,Select one,3,Self-employed
+employment_status,What is your current employment status?,Select one,4,Student and work part-time
+employment_status,What is your current employment status?,Select one,5,Student
+employment_status,What is your current employment status?,Select one,6,Retired
+employment_status,What is your current employment status?,Select one,7,Unemployed
+employment_status,What is your current employment status?,Select one,99,Not Available
+ethnicity,What is your ethnicity?,Text,N/A,N/A
+religion,What is your religion?,Text,N/A,N/A
+wmn_hh,"On average, in the last six months, how many members usually live in your household counting yourself?",Select one,1,1
+wmn_hh,"On average, in the last six months, how many members usually live in your household counting yourself?",Select one,2,2
+wmn_hh,"On average, in the last six months, how many members usually live in your household counting yourself?",Select one,3,3
+wmn_hh,"On average, in the last six months, how many members usually live in your household counting yourself?",Select one,4,4
+wmn_hh,"On average, in the last six months, how many members usually live in your household counting yourself?",Select one,5,5
+wmn_hh,"On average, in the last six months, how many members usually live in your household counting yourself?",Select one,6,6
+wmn_hh,"On average, in the last six months, how many members usually live in your household counting yourself?",Select one,7,7
+wmn_hh,"On average, in the last six months, how many members usually live in your household counting yourself?",Select one,8,8
+wmn_hh,"On average, in the last six months, how many members usually live in your household counting yourself?",Select one,9,9
+wmn_hh,"On average, in the last six months, how many members usually live in your household counting yourself?",Select one,10,10
+wmn_hh,"On average, in the last six months, how many members usually live in your household counting yourself?",Select one,11,11
+wmn_hh,"On average, in the last six months, how many members usually live in your household counting yourself?",Select one,12,12
+wmn_hh,"On average, in the last six months, how many members usually live in your household counting yourself?",Select one,13,13
+wmn_hh,"On average, in the last six months, how many members usually live in your household counting yourself?",Select one,14,14
+wmn_hh,"On average, in the last six months, how many members usually live in your household counting yourself?",Select one,15,15
+wmn_hh,"On average, in the last six months, how many members usually live in your household counting yourself?",Select one,16,16
+wmn_hh,"On average, in the last six months, how many members usually live in your household counting yourself?",Select one,17,17
+wmn_hh,"On average, in the last six months, how many members usually live in your household counting yourself?",Select one,18,18
+wmn_hh,"On average, in the last six months, how many members usually live in your household counting yourself?",Select one,19,19
+wmn_hh,"On average, in the last six months, how many members usually live in your household counting yourself?",Select one,20,20 and over
+wmn_pregnancy_desire,How long would you like to wait from now before the birth of a/another child?,Select one,1,I want to have a/another child soon
+wmn_pregnancy_desire,How long would you like to wait from now before the birth of a/another child?,Select one,2,I want to have a/another child later
+wmn_pregnancy_desire,How long would you like to wait from now before the birth of a/another child?,Select one,3,Undecided whether I want a/another child
+wmn_pregnancy_desire,How long would you like to wait from now before the birth of a/another child?,Select one,4,I don't want more children
+wmn_pregnancy_desire,How long would you like to wait from now before the birth of a/another child?,Select one,5,I am not able to have a/another child
+wmn_pregnancy_desire,How long would you like to wait from now before the birth of a/another child?,Select one,88,Prefer not to respond
+wmn_pregnancy_change,"Since March, has your desire for children changed?",Select one,1,Yes
+wmn_pregnancy_change,"Since March, has your desire for children changed?",Select one,0,No
+wmn_pregnancy_change_how,How has your desire for children changed since March?,Select one,1,I no longer want a/another child
+wmn_pregnancy_change_how,How has your desire for children changed since March?,Select one,2,I am now undecided
+wmn_pregnancy_change_how,How has your desire for children changed since March?,Select one,3,I now want a/another child
+wmn_pregnancy_change_how,How has your desire for children changed since March?,Select one,4,I want to have a/another child but later than I did before
+wmn_pregnancy_change_how,How has your desire for children changed since March?,Select one,5,I want to have a/another child but sooner than I did before
+wmn_pregnancy_change_how,How has your desire for children changed since March?,Select one,88,Decline to respond
+wmn_con,"In the last 6 months, have you or your partner used any contraception method to delay or avoid getting pregnant?",Select one,1,Yes
+wmn_con,"In the last 6 months, have you or your partner used any contraception method to delay or avoid getting pregnant?",Select one,0,No
+wmn_con_type,Indicate which type of contraception method you or your partner have used in the last six months.,Select multiple,1,Female sterilization
+wmn_con_type,Indicate which type of contraception method you or your partner have used in the last six months.,Select multiple,2,Male sterilization
+wmn_con_type,Indicate which type of contraception method you or your partner have used in the last six months.,Select multiple,3,Implant
+wmn_con_type,Indicate which type of contraception method you or your partner have used in the last six months.,Select multiple,4,IUD
+wmn_con_type,Indicate which type of contraception method you or your partner have used in the last six months.,Select multiple,5,Injectables
+wmn_con_type,Indicate which type of contraception method you or your partner have used in the last six months.,Select multiple,6,Pill
+wmn_con_type,Indicate which type of contraception method you or your partner have used in the last six months.,Select multiple,7,Male condom
+wmn_con_type,Indicate which type of contraception method you or your partner have used in the last six months.,Select multiple,8,Female condom
+wmn_con_type,Indicate which type of contraception method you or your partner have used in the last six months.,Select multiple,9,Diaphragm
+wmn_con_type,Indicate which type of contraception method you or your partner have used in the last six months.,Select multiple,10,Foam/Jelly
+wmn_con_type,Indicate which type of contraception method you or your partner have used in the last six months.,Select multiple,99,Other
+wmn_con_type,Indicate which type of contraception method you or your partner have used in the last six months.,Select multiple,11,Other traditional methods
+wmn_con_type,Indicate which type of contraception method you or your partner have used in the last six months.,Select multiple,77,Don't know
+wmn_con_type,Indicate which type of contraception method you or your partner have used in the last six months.,Select multiple,88,Decline to respond
+wmn_pre_con_access_difficulty,"During December-February, did you experience any difficulties in accessing your method of contraception?",Select one,1,Yes
+wmn_pre_con_access_difficulty,"During December-February, did you experience any difficulties in accessing your method of contraception?",Select one,0,No
+wmn_pre_con_access_difficulty,"During December-February, did you experience any difficulties in accessing your method of contraception?",Select one,2,Did not need contraception
+wmn_pre_missed_dose_pills,"On average during a week, how many pills did you miss during December - February?",Text,N/A,N/A
+wmn_pre_con_needed,"On average during a week, how many times did you require contraception during December - February?",Select one,0,0
+wmn_pre_con_needed,"On average during a week, how many times did you require contraception during December - February?",Select one,1,1
+wmn_pre_con_needed,"On average during a week, how many times did you require contraception during December - February?",Select one,2,2
+wmn_pre_con_needed,"On average during a week, how many times did you require contraception during December - February?",Select one,3,3
+wmn_pre_con_needed,"On average during a week, how many times did you require contraception during December - February?",Select one,4,4
+wmn_pre_con_needed,"On average during a week, how many times did you require contraception during December - February?",Select one,5,5
+wmn_pre_con_needed,"On average during a week, how many times did you require contraception during December - February?",Select one,6,6
+wmn_pre_con_needed,"On average during a week, how many times did you require contraception during December - February?",Select one,7,7 or more
+wmn_pre_con_accessed,How many times were you able to access contraception during the average week from December - February?,Select one,0,0
+wmn_pre_con_accessed,How many times were you able to access contraception during the average week from December - February?,Select one,1,1
+wmn_pre_con_accessed,How many times were you able to access contraception during the average week from December - February?,Select one,2,2
+wmn_pre_con_accessed,How many times were you able to access contraception during the average week from December - February?,Select one,3,3
+wmn_pre_con_accessed,How many times were you able to access contraception during the average week from December - February?,Select one,4,4
+wmn_pre_con_accessed,How many times were you able to access contraception during the average week from December - February?,Select one,5,5
+wmn_pre_con_accessed,How many times were you able to access contraception during the average week from December - February?,Select one,6,6
+wmn_pre_con_accessed,How many times were you able to access contraception during the average week from December - February?,Select one,7,7 or more
+wmn_pre_injectable_missed,How many times during December-February did you need either an appointment for an injectable contraception but could not access it?,Text,N/A,N/A
+wmn_pre_iud_missed,How many times during December-February did you need an appointment for IUD but could not access it?,Text,N/A,N/A
+wmn_pre_con_missed_why,What were the reason(s) you were not able to access your method of contraception during December-February?,Select multiple,1,Health facility closed
+wmn_pre_con_missed_why,What were the reason(s) you were not able to access your method of contraception during December-February?,Select multiple,2,Turned away from health facility
+wmn_pre_con_missed_why,What were the reason(s) you were not able to access your method of contraception during December-February?,Select multiple,3,Contraception not available
+wmn_pre_con_missed_why,What were the reason(s) you were not able to access your method of contraception during December-February?,Select multiple,4,No transportation
+wmn_pre_con_missed_why,What were the reason(s) you were not able to access your method of contraception during December-February?,Select multiple,5,Lack of money
+wmn_pre_con_missed_why,What were the reason(s) you were not able to access your method of contraception during December-February?,Select multiple,8,Partner or family does not approve
+wmn_pre_con_missed_why,What were the reason(s) you were not able to access your method of contraception during December-February?,Select multiple,99,Other
+wmn_pre_con_missed_why,What were the reason(s) you were not able to access your method of contraception during December-February?,Select multiple,88,Decline to respond
+wmn_pre_con_missed_why_other,Specify the other reason you were not able to access contraception during December - February.,Text,N/A,N/A
+wmn_post_con_access_difficulty,"Since March, did you experience any difficulties in accessing your method of contraception?",Select one,1,Yes
+wmn_post_con_access_difficulty,"Since March, did you experience any difficulties in accessing your method of contraception?",Select one,0,No
+wmn_post_con_access_difficulty,"Since March, did you experience any difficulties in accessing your method of contraception?",Select one,2,Did not need contraception
+wmn_post_missed_dose_pills,"On average during a week, how many pills did you miss since March?",Text,N/A,N/A
+wmn_post_con_needed,"On average during a week, how many times did you require contraception since March?",Select one,0,0
+wmn_post_con_needed,"On average during a week, how many times did you require contraception since March?",Select one,1,1
+wmn_post_con_needed,"On average during a week, how many times did you require contraception since March?",Select one,2,2
+wmn_post_con_needed,"On average during a week, how many times did you require contraception since March?",Select one,3,3
+wmn_post_con_needed,"On average during a week, how many times did you require contraception since March?",Select one,4,4
+wmn_post_con_needed,"On average during a week, how many times did you require contraception since March?",Select one,5,5
+wmn_post_con_needed,"On average during a week, how many times did you require contraception since March?",Select one,6,6
+wmn_post_con_needed,"On average during a week, how many times did you require contraception since March?",Select one,7,7 or more
+wmn_post_con_accessed,How many times during the average week were you able to access contraception since March?,Select one,0,0
+wmn_post_con_accessed,How many times during the average week were you able to access contraception since March?,Select one,1,1
+wmn_post_con_accessed,How many times during the average week were you able to access contraception since March?,Select one,2,2
+wmn_post_con_accessed,How many times during the average week were you able to access contraception since March?,Select one,3,3
+wmn_post_con_accessed,How many times during the average week were you able to access contraception since March?,Select one,4,4
+wmn_post_con_accessed,How many times during the average week were you able to access contraception since March?,Select one,5,5
+wmn_post_con_accessed,How many times during the average week were you able to access contraception since March?,Select one,6,6
+wmn_post_con_accessed,How many times during the average week were you able to access contraception since March?,Select one,7,7 or more
+wmn_post_injectable_missed,How many times since March did you need an appointment for injectable contraception but could not access it?,Text,N/A,N/A
+wmn_post_iud_missed,How many times since March did you need an appointment for an IUD but could not access it?,Text,N/A,N/A
+wmn_post_con_missed_why,What were the reason(s) you could not access your method of contraception since March?,Select multiple,1,Health facility closed
+wmn_post_con_missed_why,What were the reason(s) you could not access your method of contraception since March?,Select multiple,2,Turned away from health facility
+wmn_post_con_missed_why,What were the reason(s) you could not access your method of contraception since March?,Select multiple,3,Contraception not available
+wmn_post_con_missed_why,What were the reason(s) you could not access your method of contraception since March?,Select multiple,4,No transportation
+wmn_post_con_missed_why,What were the reason(s) you could not access your method of contraception since March?,Select multiple,5,Lack of money
+wmn_post_con_missed_why,What were the reason(s) you could not access your method of contraception since March?,Select multiple,6,Unable to access due to lockdown restrictions
+wmn_post_con_missed_why,What were the reason(s) you could not access your method of contraception since March?,Select multiple,7,Fear of being infected with COVID-19
+wmn_post_con_missed_why,What were the reason(s) you could not access your method of contraception since March?,Select multiple,8,Partner or family does not approve
+wmn_post_con_missed_why,What were the reason(s) you could not access your method of contraception since March?,Select multiple,99,Other
+wmn_post_con_missed_why,What were the reason(s) you could not access your method of contraception since March?,Select multiple,88,Decline to respond
+wmn_post_con_missed_why_other,Specify the other reason you were not able to access contraception since March.,Text,N/A,N/A
+wmn_alone,Are you alone right now?,Select one,1,Yes
+wmn_alone,Are you alone right now?,Select one,0,No
+wmn_alone,Are you alone right now?,Select one,88,Decline to respond
+wmn_how_safe,"How safe do you feel in your home, where you currently sleep?",Select one,4,Very safe
+wmn_how_safe,"How safe do you feel in your home, where you currently sleep?",Select one,3,Pretty safe
+wmn_how_safe,"How safe do you feel in your home, where you currently sleep?",Select one,2,A little unsafe
+wmn_how_safe,"How safe do you feel in your home, where you currently sleep?",Select one,1,Very unsafe
+wmn_how_safe,"How safe do you feel in your home, where you currently sleep?",Select one,77,Don't know
+wmn_how_safe,"How safe do you feel in your home, where you currently sleep?",Select one,88,Decline to respond
+wmn_safe_change,"Since March, have you felt more or less safe in your home?",Select one,3,More safe
+wmn_safe_change,"Since March, have you felt more or less safe in your home?",Select one,1,Less safe
+wmn_safe_change,"Since March, have you felt more or less safe in your home?",Select one,2,About the same
+wmn_safe_change,"Since March, have you felt more or less safe in your home?",Select one,77,Don't know
+wmn_safe_change,"Since March, have you felt more or less safe in your home?",Select one,88,Decline to respond
+wmn_safe_place,Is there a place that you could go if something happened that made you feel unsafe in your home?,Select one,1,Yes
+wmn_safe_place,Is there a place that you could go if something happened that made you feel unsafe in your home?,Select one,0,No
+wmn_safe_place,Is there a place that you could go if something happened that made you feel unsafe in your home?,Select one,77,Don't know
+wmn_safe_place,Is there a place that you could go if something happened that made you feel unsafe in your home?,Select one,88,Decline to respond
+wmn_pre_safe_place,"During December-February, how often did you need to go to this place?",Select one,4,Every day
+wmn_pre_safe_place,"During December-February, how often did you need to go to this place?",Select one,3,Once a week
+wmn_pre_safe_place,"During December-February, how often did you need to go to this place?",Select one,2,Once a month
+wmn_pre_safe_place,"During December-February, how often did you need to go to this place?",Select one,1,Rarely
+wmn_pre_safe_place,"During December-February, how often did you need to go to this place?",Select one,0,Never
+wmn_pre_safe_place,"During December-February, how often did you need to go to this place?",Select one,77,Don't know
+wmn_pre_safe_place,"During December-February, how often did you need to go to this place?",Select one,88,Decline to respond
+wmn_post_safe_place,"Since March, how often did you need to go to this place?",Select one,4,Every day
+wmn_post_safe_place,"Since March, how often did you need to go to this place?",Select one,3,Once a week
+wmn_post_safe_place,"Since March, how often did you need to go to this place?",Select one,2,Once a month
+wmn_post_safe_place,"Since March, how often did you need to go to this place?",Select one,1,Rarely
+wmn_post_safe_place,"Since March, how often did you need to go to this place?",Select one,0,Never
+wmn_post_safe_place,"Since March, how often did you need to go to this place?",Select one,77,Don't know
+wmn_post_safe_place,"Since March, how often did you need to go to this place?",Select one,88,Decline to respond
+wmn_safe_place_no_access,"Since March, did you intend to go to this safe place but were prevented from doing so?",Select one,1,Yes
+wmn_safe_place_no_access,"Since March, did you intend to go to this safe place but were prevented from doing so?",Select one,0,No
+wmn_safe_place_no_access,"Since March, did you intend to go to this safe place but were prevented from doing so?",Select one,77,Don't know
+wmn_safe_place_no_access,"Since March, did you intend to go to this safe place but were prevented from doing so?",Select one,88,Decline to respond
+wmn_safe_place_no_access_why,What was the main reason that prevented you from going to this place?,Select one,1,Unable to access place due to lockdown
+wmn_safe_place_no_access_why,What was the main reason that prevented you from going to this place?,Select one,2,Place was closed or unavailable for reason other than lockdown
+wmn_safe_place_no_access_why,What was the main reason that prevented you from going to this place?,Select one,3,Afraid of consequences
+wmn_safe_place_no_access_why,What was the main reason that prevented you from going to this place?,Select one,4,No transportation
+wmn_safe_place_no_access_why,What was the main reason that prevented you from going to this place?,Select one,5,Fear of being infected with COVID-19
+wmn_safe_place_no_access_why,What was the main reason that prevented you from going to this place?,Select one,99,Other
+wmn_safe_place_no_access_why,What was the main reason that prevented you from going to this place?,Select one,88,Decline to respond
+wmn_pre_help,"During December-February, have you sought the services of a women's help organization (e.g. crisis center, shelter, hotline)?",Select one,1,Yes
+wmn_pre_help,"During December-February, have you sought the services of a women's help organization (e.g. crisis center, shelter, hotline)?",Select one,0,No
+wmn_pre_help,"During December-February, have you sought the services of a women's help organization (e.g. crisis center, shelter, hotline)?",Select one,77,Don't know
+wmn_pre_help,"During December-February, have you sought the services of a women's help organization (e.g. crisis center, shelter, hotline)?",Select one,88,Decline to respond
+wmn_post_help,"Since March, have you sought the services of a women's help organization (e.g. crisis center, shelter, hotline)?",Select one,1,Yes
+wmn_post_help,"Since March, have you sought the services of a women's help organization (e.g. crisis center, shelter, hotline)?",Select one,0,No
+wmn_post_help,"Since March, have you sought the services of a women's help organization (e.g. crisis center, shelter, hotline)?",Select one,77,Don't know
+wmn_post_help,"Since March, have you sought the services of a women's help organization (e.g. crisis center, shelter, hotline)?",Select one,88,Decline to respond
+wmn_post_no_help,"Since March, have you wanted to seek the services of a women's help organization but did not?",Select one,1,Yes
+wmn_post_no_help,"Since March, have you wanted to seek the services of a women's help organization but did not?",Select one,0,No
+wmn_post_no_help,"Since March, have you wanted to seek the services of a women's help organization but did not?",Select one,77,Don't know
+wmn_post_no_help,"Since March, have you wanted to seek the services of a women's help organization but did not?",Select one,88,Decline to respond
+wmn_no_help_why,What was the main reason you were unable to seek the services of a women's help organization?,Select one,1,Did not know where to go
+wmn_no_help_why,What was the main reason you were unable to seek the services of a women's help organization?,Select one,2,Too far from services
+wmn_no_help_why,What was the main reason you were unable to seek the services of a women's help organization?,Select one,3,Could not afford transport or service fees
+wmn_no_help_why,What was the main reason you were unable to seek the services of a women's help organization?,Select one,4,Services unavailable due to COVID-19 restrictions
+wmn_no_help_why,What was the main reason you were unable to seek the services of a women's help organization?,Select one,5,Unable to travel due to COVID-19 restrictions
+wmn_no_help_why,What was the main reason you were unable to seek the services of a women's help organization?,Select one,6,Fear of threats/consequences/getting into trouble
+wmn_no_help_why,What was the main reason you were unable to seek the services of a women's help organization?,Select one,7,Embarrassed for myself or my family
+wmn_no_help_why,What was the main reason you were unable to seek the services of a women's help organization?,Select one,77,Don't know
+wmn_no_help_why,What was the main reason you were unable to seek the services of a women's help organization?,Select one,99,Other
+wmn_no_help_why,What was the main reason you were unable to seek the services of a women's help organization?,Select one,88,Decline to answer
