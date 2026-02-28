@@ -1,1 +1,1 @@
-pip install pandas notebook
+pip install pandas notebook matplotlib
