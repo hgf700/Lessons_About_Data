@@ -1,1 +1,3 @@
-pip install pandas notebook matplotlib
+pip install pandas notebook matplotlib pypandoc plotly kagglehub
+
+choco install pandoc
