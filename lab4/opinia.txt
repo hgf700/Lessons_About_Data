@@ -1,0 +1,4 @@
+funkcje dawania kary dla modelu
+
+ridge - zmniejsza liczby
+lasso - wspolczynniki do zerowania
