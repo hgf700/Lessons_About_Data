@@ -1,3 +1,3 @@
-pip install pandas notebook matplotlib pypandoc plotly kagglehub plotnine nbconvert ipywidgets seaborn scikit-learn umap-learn scipy numba tqdm numpy altair
+pip install pandas notebook matplotlib pypandoc plotly kagglehub plotnine nbconvert ipywidgets seaborn scikit-learn umap-learn scipy numba tqdm numpy altair torch statsmodels
 
 choco install pandoc

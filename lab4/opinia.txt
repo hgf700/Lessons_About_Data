@@ -1,4 +1,70 @@
-funkcje dawania kary dla modelu
+#       metryki uczenia
 
-ridge - zmniejsza liczby
-lasso - wspolczynniki do zerowania
+#R-squared, - współczynnik determinacji (Mówi, jak dobrze model tłumaczy dane) 
+#1.0 → idealnie 0.0 → model nic nie wnosi (jak zgadywanie średniej) < 0 → model jest fatalny
+
+#MSE (Mean Squared Error) 
+#Średnia z kwadratów błędów Wzór: (y_true - y_pred)², Zawsze ≥ 0 Im większy błąd, tym bardziej jest „karany”
+
+#MAE (Mean Absolute Error)
+#Średnia z bezwzględnych błędów Wzór: |y_true - y_pred| Też ≥ 0 Łatwiejszy do interpretacji niż MSE
+
+#       funkcje dawania kary dla modelu
+
+#ridge (regresja grzbietowa) Używa regularyzacji L2 - Dodaje karę za duże współczynniki zmniejsza wartości
+# współczynników, ale ich nie zeruje pomaga, gdy masz: dużo cech, współliniowośćzmniejsza liczby 
+
+#lasso regularyzacja L1 - może wyzerować niektóre współczynniki czyli automatycznie robi selekcję cech
+#większe alpha → silniejsza kara → prostszy model, mniejsze alpha → model bardziej dopasowany do danych
+
+#       statystyki/ testy dla zalozen regersji
+
+#shapiro (rozklad gausa/normalny) - p > 0.05 → OK (reszty są ~normalne) p ≤ 0.05 → problem (reszty nie są normalne)
+#W regresji liniowej zakłada się, że błędy są normalne (ważne np. dla testów statystycznych i przedziałów ufności).
+
+#durbin_watson - Czy reszty są autokorelowane (czy zależą od siebie w czasie).
+#~2 → brak autokorelacji , < 2 → dodatnia autokorelacja , > 2 → ujemna autokorelacja 
+
+#       model pytorch
+
+#flatten zamienia (100,) # wektor 1D na (100, 1) # kolumna (2D)
+y_train_scaled = scaler_y.fit_transform(y_noisy.reshape(-1, 1)).flatten()
+
+#zamiana np.array([[1., -1.]]) na tensor([ 1.0000, -1.0000])
+X_train_tensor = torch.FloatTensor(X_train_scaled)
+
+#shuffle=True losowo mieszane dane / permutacja inne ułożenie tych samych elementów
+train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
+
+#To wywołuje konstruktor klasy bazowej (nn.Module).  Bez tego PyTorch:  nie zarejestruje warstw
+def __init__(self, input_dim):
+    super().__init__()
+
+#x.squeeze() Usuwa zbędny wymiar.
+tensor([[2.5],[3.1],[1.8]])   # bez squeeze shape: (3, 1)
+tensor([2.5, 3.1, 1.8])   # z squeeze shape: (3,)
+
+for X_batch, y_batch in train_loader:
+    #zeruje stare gradienty PyTorch domyślnie sumuje gradienty z poprzednich kroków.
+    optimizer.zero_grad()
+    #forward pass (przejście do przodu) przepuszcza przez warstwy daje predykcję
+    outputs = model(X_batch)
+    #pewnie mse albo mae
+    loss = criterion(outputs, y_batch)
+    #backpropagation (wsteczna propagacja błędu)
+    loss.backward()
+    #aktualizacja wag
+    optimizer.step()
+    #zbieranie błędu do statystyk
+    epoch_loss += loss.item()
+
+#tryb testowania wylacza dropout (losowe wyłączanie neuronów) uczenie batch normalization
+model.eval()
+#nie licz gradientów - bo nie uczysz modelu
+with torch.no_grad():
+    val_pred = model(X_test_tensor)
+    val_loss = criterion(val_pred, y_test_tensor)
+    
+#zapisujesz średni błąd treningowy z epoki
+train_losses.append(epoch_loss / len(train_loader))
+
