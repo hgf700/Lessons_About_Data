@@ -281,3 +281,150 @@ scaler.fit(X_train)
 #Silna korelacja cechy z targetem
 #Brak spadku jakości na walidacji
 #Różnica między offline a produkcją
+
+        wyklad 13        Ewaluacja modeli i walidacja Train/test split, cross-validation, metryki oraz
+                         overfitting vs underfitting
+
+#Model oceniamy po tym, jak dobrze generalizuje na nowe obserwacje.
+
+#   protokół holdout - zbiór treningowy (train) – służy do uczenia modelu, 
+#zbiór testowy (test) – służy do sprawdzenia, jak dobrze model działa na nowych danych,
+#czasami dodatkowo zbiór walidacyjny (validation) – do strojenia parametrów modelu.
+
+#   Wynik cross-validation
+#Średnia mówi o typowej jakości modelu. Odchylenie standardowe mówi o stabilności wyniku względem podziału danych.
+#Duże wahania sugerują mało danych, niestabilny model lub niejednorodny zbiór.
+
+#   Kiedy cross-validation nie wystarcza?
+#Szeregi czasowe: foldy nie mogą mieszać przeszłości z przyszłością.
+#Dane grupowe: obserwacje jednej osoby/firmy nie powinny trafić jednocześnie do train i validation.
+#Bardzo duże dane, Selekcja wielu modeli: potrzebna bywa walidacja zagnieżdżona, czyli nested CV.
+
+#Accuracy: odsetek poprawnych predykcji
+#Recall: ile pozytywów znaleźliśmy
+#F1-score: kompromis precision i recall wysoki gdy zarówno precision, jak i recall są wysokie.
+
+#   Jak dobrać metrykę klasyfikacji
+#Zbalansowane klasy, podobny koszt błędów - accuracy
+#Fałszywe alarmy są drogie - precision
+#Pominięcia są drogie = recall
+#Potrzebny kompromis False Positive/False Negative
+#Klasy niezbalansowane dominacja klasy większościowej - F1, precision/recall, macro avg
+
+#   Klasyfikacja wieloklasowa 
+#micro - Najpierw sumujemy wszystkie TP, FP i FN dla wszystkich klas, a dopiero potem liczymy metrykę.
+#każda obserwacja ma taką samą wagę, mocno zależy od licznych klas, w klasyfikacji jednowybiorowej 
+#(jedna etykieta na przykład) micro precision = micro recall = micro F1 = accuracy.
+#Używaj, gdy interesuje Cię skuteczność na poziomie pojedynczych przykładów.
+
+#macro - Obliczamy metrykę osobno dla każdej klasy, a następnie liczymy zwykłą średnią. każda klasa ma taką
+#samą wagę, rzadkie klasy są równie ważne jak częste, dobrze pokazuje, czy model nie zaniedbuje
+#mniejszościowych klas. Używaj, gdy wszystkie klasy są równie ważne.
+
+#weighted - Tak jak w macro, najpierw liczymy metrykę dla każdej klasy, ale średnia jest ważona liczbą
+#przykładów w klasie. częste klasy mają większy wpływ na wynik, wynik zwykle jest wyższy niż macro przy
+#niezbalansowanych danych, słabe wyniki dla rzadkich klas mogą zostać „ukryte”.
+#Używaj, gdy rozkład klas odzwierciedla rzeczywistość i chcesz ocenić ogólną skuteczność modelu.
+
+#   MSE Mean Squared Error
+#Czułość na outliery wysoka
+#Kara za błąd rośnie kwadratowo. Duże błędy mają szczególnie duży wpływ
+#RMSE - pierwiastek z MSE Czułość na outliery wysoka
+#MAE - srednia Czułość na outliery niższa
+
+#   R^2 współczynnik determinacji
+#R = 1: model idealny. R = 0: model nie lepszy niż przewidywanie średniej.
+#R < 0: model gorszy niż przewidywanie średniej.
+#Wysokie R^2 nie dowodzi przyczynowości ani poprawności modelu poza zakresem danych.
+
+#   Underfitting: objawy
+#Wysoki błąd na treningu i walidacji. Model nie potrafi uchwycić zależności. Zbyt mało cech, zbyt prosty model, zbyt
+#silna regularyzacja. (podczas uczenia modelu mocno karzemy go za zbyt dużą złożoność, aby ograniczyć 
+#przeuczenie/overfitting.)
+#co zrobic Dodać cechy, wybrać bardziej elastyczny model, zmniejszyć regularyzację, trenować dłużej.
+
+#   Overfitting: objawy
+#Bardzo niski błąd na treningu, wysoki błąd na walidacji/test. Model reaguje na szum i przypadkowe fluktuacje.
+#Typowe przy dużej liczbie cech, małej próbie lub zbyt złożonym modelu.
+#co zrobic Regularyzacja, prostszy model, więcej danych, augmentacja, early stopping, pruning, poprawny preprocessing.
+
+#   Krzywa uczenia
+#Duża luka train–validation: model ma wysoką wariancję. Oba wyniki słabe: model ma wysoki bias. Poprawa po dodaniu
+#danych: warto zbierać więcej danych.
+
+#   Jak ograniczać overfitting
+#Po stronie danych - więcej danych, lepsza jakość etykiet, usunięcie duplikatów i leakage, augmentacja danych.
+#Po stronie modelu - regularyzacja L1/L2, ograniczenie głębokości drzewa, early stopping, dropout lub ensemble,
+#wybór prostszego modelu
+
+#   Jak ograniczać underfitting
+#Sprawdź, czy preprocessing nie usuwa ważnych informacji. Dodaj nieliniowe cechy, interakcje lub embeddingi.
+#Zwiększ złożoność modelu. Zmniejsz regularyzację. Trenuj dłużej lub popraw optymalizację.
+
+#   Model baseline: punkt odniesienia
+#Baseline Prosty model referencyjny, z którym porównujemy bardziej złożone modele.
+#Klasyfikacja - najczęstsza klasa, losowanie zgodnie z rozkładem klas, prosty model liniowy.
+#Regresja - predykcja średniej, predykcja mediany, ostatnia obserwacja w szeregu czasowym.
+
+        wyklad 14        Wprowadzenie do wdrażania modeli ML w praktyce
+
+#   model w Notebook a Produkcja
+#Notebook - lokalne dane, ręczne uruchomienie, brak gwarancji stabilności, wynik dla konkretnego eksperymentu
+#Produkcja - dane napływają stale, automatyczne predykcje, integracja z aplikacją, monitoring i alerty.
+
+#   Wdrożenie modelu
+#Udostępnienie modelu tak, aby mógł regularnie generować predykcje dla nowych danych i wspierać rzeczywiste decyzje
+
+#Reproducibility - czy potrafimy odtworzyć model (zostawiac logike i dane do uczenia modelu)
+
+#   Model registry 
+#przechowywania wersji modeli, metadanych i statusów wdrożenia.
+
+#   Batch inference: predykcja wsadowa
+#Model przetwarza dużą porcję danych jednocześnie, zwykle według harmonogramu. np: nocne liczenie rekomendacji dla 
+#użytkowników, Nie musimy odpowiadać natychmiast na pojedyncze żądanie.
+
+#   Real-time inference: predykcja online
+#Model odpowiada na pojedyncze żądania w momencie, gdy użytkownik lub system potrzebuje predykcji. np: wykrywanie
+#fraudów podczas płatności, Liczy się niski czas odpowiedzi i stabilność usługi
+
+#   Systemy hybrydowe
+#Część predykcji lub cech liczymy wcześniej w batchu, a część uzupełniamy online.
+
+#Latency: czas odpowiedzi 
+#Throughput: przepustowość - Throughput oznacza liczbę żądań lub rekordów obsłużonych w jednostce czasu
+#Niski latency i wysoki throughput często wymagają kompromisów architektonicznych.
+
+#Monitoring rozkładów cech - może być pierwszym sygnałem driftu.(zmiany danych i potrzeba uczenia modelu)
+#Monitoring predykcji - szukanie problem z danymi, modelem lub ruchem użytkowników.
+#Monitoring jakości modelu - Jeśli znamy prawdziwe etykiety, monitorujemy jakość predykcji.
+#Alerting - Automatyczny sygnał, że określona metryka przekroczyła ustalony próg dla np.latency, brakujące wartości 
+#AUC, PSI
+
+#   SLO: Service Level Objective
+#Cel jakości usługi, np. „99% predykcji poniżej 200 ms”. dobra predykcja
+
+#   SLA: Service Level Agreement
+#Formalna umowa dotycząca poziomu usługi „99% predykcji poniżej 200 ms ale wymagane caly czas
+
+#   Co logować dla predykcji?
+#czas żądania, wersja modelu, identyfikator rekordu (połączenie z późniejszą etykietą), cechy wejściowe (szukanie drift),
+#predykcja / prawdopodobieństwo, czas odpowiedzi, błąd / status(http)
+
+#   dlaczego drift
+#Model był trenowany na danych z przeszłości, a działa na danych z przyszłości.
+
+#   Jak wykrywać drift?
+#Porównywanie statystyk opisowyc, Porównywanie histogramów i rozkładów. Testy statystyczne. Miary odległości między
+#rozkładami. Monitorowanie jakości modelu na nowych etykietach.
+
+#   Population Stability Index (PSI)
+#Mały PSI oznacza stabilność, duży PSI sugeruje zmianę rozkładu.
+#PSI mierzy, jak bardzo zmienił się rozkład zmiennej między próbą referencyjną a produkcyjną.
+
+#   KL divergence i Jensen-Shannon divergence
+#JSD jest symetryczna i często wygodniejsza do porównywania rozkładów.
+
+#   Canary deployment i  A/B testy
+#Canary deployment - Nowy model otrzymuje mały procent ruchu. 95% → M1, 5% → M2
+#A/B testy - Porównujemy wpływ różnych modeli na metryki biznesowe.
